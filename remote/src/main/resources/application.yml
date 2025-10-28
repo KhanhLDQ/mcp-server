@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: remote
+  datasource:
+    url: jdbc:h2:file:/Users/khanhle/Documents/odyssey/the-lab/mcp-server/remote/data/mcp-server-remote-database;AUTO_SERVER=true
+    driver-class-name: org.h2.Driver
+    username: khanh
+    password: 12345
+  jpa:
+    hibernate:
+      ddl-auto: update #update the schema if necessary
+  h2:
+    console:
+      enabled: true
+  main:
+    banner-mode: off
+
+server:
+  port: 8090
+
+logging:
+  pattern:
+    console: "%green(%d{yyyy-MM-dd HH:mm:ss.SSS}) %blue(%-5level) %magenta(${PID:- }) --- %red([%15.15thread]) %yellow(%-40.40logger{39}): %msg%n%wEx"
